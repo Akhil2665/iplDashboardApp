@@ -1,0 +1,47 @@
+/* Write your CSS here */
+.recent-match-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1e293b;
+  height: 220px;
+  width: 160px;
+  padding: 10px;
+  font-family: 'roboto';
+  text-align: center;
+  font-size: 12px;
+  border-radius: 8%;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+@media (min-width: 768px) {
+  .recent-match-details-container {
+    min-height: 300px;
+    width: 250px;
+  }
+}
+.competing-team-logo {
+  height: 50px;
+  width: 50px;
+}
+.competing-team {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+.result {
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+}
+.match-status {
+  font-size: 15px;
+  font-weight: 600;
+}
+.won {
+  color: green;
+}
+.lost {
+  color: red;
+}

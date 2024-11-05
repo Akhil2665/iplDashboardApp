@@ -1,0 +1,65 @@
+/* Write your CSS here */
+/* Write your CSS here */
+.latest-match-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e293b;
+  min-height: 400px;
+  min-width: 95%;
+  font-family: 'roboto';
+  border-radius: 8px;
+  margin: 30px;
+  text-align: center;
+}
+
+.competing-team-logo-image {
+  height: 80px;
+  width: 140px;
+}
+.competing-team-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  width: 95%;
+  color: white;
+  font-weight: 600;
+  border-bottom: 2px dotted #475569;
+}
+.match-summary-container {
+  text-align: left;
+  width: 90%;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .latest-match-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 22px;
+  }
+  .competing-team-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    font-size: 24px;
+    border: none;
+  }
+  .match-summary-container {
+    text-align: left;
+    width: 25%;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .competing-team-logo-image {
+    height: 150px;
+    width: 150px;
+  }
+}

@@ -1,0 +1,22 @@
+/* Write your CSS here */
+.team-matches-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-center;
+  align-items: center;
+  font-family: 'roboto';
+  color: white;
+  background-color: lightblue;
+}
+.team-banner-image {
+  height: 220px;
+  margin-top: 40px;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .team-banner-image {
+    height: 400px;
+    width: 90%;
+  }
+}
