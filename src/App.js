@@ -16,4 +16,3 @@ const App = () => (
 export default App
 
 // test case was failed at starting related to json
-
