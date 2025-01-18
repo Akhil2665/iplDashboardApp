@@ -3,8 +3,8 @@
     "browser": true,
     "es2021": true
   },
-  "parser": "babel-eslint",
-  "extends": [  
+  "parser": "@babel/eslint-parser",
+  "extends": [
     "airbnb",
     "prettier"
   ],

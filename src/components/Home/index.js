@@ -14,9 +14,10 @@ class Home extends Component {
   componentDidMount() {
     this.getTeamsData()
   }
+  // use correct api url % Before this I used / after ipl so the test cases related json are failed
 
   getTeamsData = async () => {
-    const response = await fetch('https://apis.ccbp.in/ipl') // use correct api url % Before this I used / after ipl so the test cases related json are failed
+    const response = await fetch('https://apis.ccbp.in/ipl')
     console.log(response)
     const jsonData = await response.json()
     console.log(jsonData)
