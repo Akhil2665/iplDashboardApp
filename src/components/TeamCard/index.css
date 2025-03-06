@@ -1,6 +1,6 @@
 .each-team-card-container {
-  width: 180px;
-  height: 120px;
+  width: 160px;
+  height: 140px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -11,6 +11,16 @@
   margin: 16px;
   transition: transform 0.3s ease;
   text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .each-team-card-container {
+    width: 240px;
+    height: 120px;
+  }
 }
 
 .each-team-card-container:hover {
