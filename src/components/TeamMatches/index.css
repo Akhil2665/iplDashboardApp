@@ -20,3 +20,9 @@
     width: 90%;
   }
 }
+.recent-matches-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 98%;
+}

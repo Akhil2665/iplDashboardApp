@@ -72,7 +72,7 @@ class TeamMatches extends Component {
         <div className="latest-match-details-container">
           <LatestMatch latestMatchDetails={updatedLatestMatchDetails} />
         </div>
-        <ul className="teams-card-container">
+        <ul className="recent-matches-list">
           {updatedrecentMatches.map(eachTeamCard => {
             console.log(eachTeamCard)
             return (
