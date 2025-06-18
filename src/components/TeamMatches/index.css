@@ -26,3 +26,16 @@
   flex-wrap: wrap;
   width: 98%;
 }
+
+.back-btn {
+  background-color: aqua;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  align-self: flex-end;
+  margin-right: 30px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}

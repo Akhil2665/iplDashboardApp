@@ -3,6 +3,7 @@ import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import LatestMatch from '../LatestMatch'
 import MatchCard from '../MatchCard'
+import TeamStats from '../TeamStats'
 
 import './index.css'
 
@@ -36,6 +37,23 @@ class TeamMatches extends Component {
     })
   }
 
+  getNoOfMatches = value => {
+    const {matchDetailsList} = this.state
+    const {latestMatchDetails, recentMatches} = matchDetailsList
+    console.log(latestMatchDetails, 'latestMatchDetails')
+    const currentMatch = value === latestMatchDetails.matchStatus ? 1 : 0
+    const result =
+      recentMatches.filter(match => match.match_status === value).length +
+      currentMatch
+    return result
+  }
+
+  generatePieChartData = () => [
+    {name: 'Won', value: this.getNoOfMatches('Won')},
+    {name: 'Lost', value: this.getNoOfMatches('Lost')},
+    {name: 'Drawn', value: this.getNoOfMatches('Drawn')},
+  ]
+
   renderselectedTeamData = () => {
     const {matchDetailsList} = this.state
     const {latestMatchDetails, teamBannerUrl, recentMatches} = matchDetailsList
@@ -61,8 +79,17 @@ class TeamMatches extends Component {
       result: eachTeamCard.result,
     }))
 
+    const onClickedBackBtn = () => {
+      const {history} = this.props
+      history.push('/')
+    }
+
     return (
       <div className="team-matches-container">
+        <button className="back-btn" type="button" onClick={onClickedBackBtn}>
+          Back
+        </button>
+        <TeamStats data={this.generatePieChartData()} />
         <img
           src={teamBannerUrl}
           alt="team banner"
@@ -74,7 +101,6 @@ class TeamMatches extends Component {
         </div>
         <ul className="recent-matches-list">
           {updatedrecentMatches.map(eachTeamCard => {
-            console.log(eachTeamCard)
             return (
               <MatchCard
                 matchCardDetails={eachTeamCard}
